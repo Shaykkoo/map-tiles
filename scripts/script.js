@@ -22,8 +22,7 @@ CUSTOM_CRS = L.extend({}, L.CRS.Simple, {
     infinite: true
 });
 
-var SateliteStyle = L.tileLayer('styleSatelite/{z}/{x}/{y}.jpg', {minZoom: 0,maxZoom: 8,noWrap: true,continuousWorld: false,attribution: 'Online map GTA V',id: 'SateliteStyle map',}),
-	AtlasStyle	= L.tileLayer('styleAtlas/{z}/{x}/{y}.jpg', {minZoom: 0,maxZoom: 5,noWrap: true,continuousWorld: false,attribution: 'Online map GTA V',id: 'styleAtlas map',}),
+var AtlasStyle	= L.tileLayer('styleAtlas/{z}/{x}/{y}.jpg', {minZoom: 0,maxZoom: 5,noWrap: true,continuousWorld: false,attribution: 'Online map GTA V',id: 'styleAtlas map',}),
 	GridStyle	= L.tileLayer('styleGrid/{z}/{x}/{y}.png', {minZoom: 0,maxZoom: 5,noWrap: true,continuousWorld: false,attribution: 'Online map GTA V',id: 'styleGrid map',});
 
 var ExampleGroup = L.layerGroup();
@@ -39,12 +38,12 @@ var mymap = L.map('map', {
     Zoom: 5,
     maxNativeZoom: 5,
     preferCanvas: true,
-    layers: [SateliteStyle],
+    layers: [AtlasStyle],
     center: [0, 0],
     zoom: 3,
 });
 
-var layersControl = L.control.layers({ "Satelite": SateliteStyle,"Atlas": AtlasStyle,"Grid":GridStyle}, Icons).addTo(mymap);
+var layersControl = L.control.layers({ "Atlas": AtlasStyle,"Grid":GridStyle}, Icons).addTo(mymap);
 
 
 function customIcon(icon){
