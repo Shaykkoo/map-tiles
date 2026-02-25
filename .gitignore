@@ -1,0 +1,32 @@
+# Ignore Node modules if any
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment/config
+.env
+.env.local
+
+# Visual Studio Code
+.vscode/
+
+# Build / cache
+dist/
+build/
+.cache/
+
+# Misc
+*.tmp
+*.bak
+
+# Large image tiles folders (if you want to avoid uploading them uncomment)
+# styleAtlas/
+# styleGrid/
+# styleSatelite/
