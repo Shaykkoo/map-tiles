@@ -33,7 +33,7 @@ var Icons = {
 
 var mymap = L.map('map', {
     crs: CUSTOM_CRS,
-    minZoom: 1,
+    minZoom: 3,
     maxZoom: 5,
     Zoom: 5,
     maxNativeZoom: 5,
